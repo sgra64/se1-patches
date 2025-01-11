@@ -20,4 +20,5 @@ module se1.play {
     requires transitive org.slf4j;      // slf4j/log4j2 logging modules
     requires org.apache.logging.log4j.core;
     requires org.apache.logging.log4j;
+    requires lombok;
 }

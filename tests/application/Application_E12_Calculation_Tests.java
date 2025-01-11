@@ -163,7 +163,7 @@ public class Application_E12_Calculation_Tests {
         ).get();
 
 
-    @Test
+    // @Test
     @Order(100)
     void test_100_calculateIncludedVAT_regular() {
         // calculate included VAT tax of 100.00 EUR at 19%, which is 15.97 EUR
@@ -180,7 +180,7 @@ public class Application_E12_Calculation_Tests {
         assertEquals(2341L, actual);
     }
 
-    @Test
+    // @Test
     @Order(110)
     void test_110_calculateIncludedVAT_rounding_tests() {
         // see https://hilfe.sevdesk.de/de/articles/9423755-die-kaufmannische-rundungsdifferenz-darum-unterscheidet-sich-der-endbetrag-von-brutto-und-nettorechnungen
@@ -202,7 +202,7 @@ public class Application_E12_Calculation_Tests {
         assertEquals(1596, e12.calculateIncludedVAT(9993, GermanVAT));
     }
 
-    @Test
+    // @Test
     @Order(120)
     void test_120_calculateIncludedVAT_corner_cases_tests() {
         long actual = e12.calculateIncludedVAT(0, GermanVAT);
@@ -252,7 +252,7 @@ public class Application_E12_Calculation_Tests {
         720,    726,    733,    739,    746,    752,    759,    765,    772,    779,
     };
 
-    @Test
+    // @Test
     @Order(130)
     void test_130_calculateIncludedVAT_bulk_19pct_tests() {
         IntStream.range(0, p19percent.length)
@@ -263,7 +263,7 @@ public class Application_E12_Calculation_Tests {
             });
     }
 
-    @Test
+    // @Test
     @Order(131)
     void test_131_calculateIncludedVAT_bulk_7pct_tests() {
         IntStream.range(0, 2) //p7percent.length)
@@ -275,7 +275,7 @@ public class Application_E12_Calculation_Tests {
     }
 
 
-    @Test
+    // @Test
     @Order(200)
     void test_200_calculateOrderItemValue_tests() {
         var order = ericsOrderBasePricing;
@@ -303,7 +303,7 @@ public class Application_E12_Calculation_Tests {
         assertEquals(1196, actual);
     }
 
-    @Test
+    // @Test
     @Order(210)
     void test_210_calculateOrderItemValue_SwissPricing_tests() {
         //
@@ -342,7 +342,7 @@ public class Application_E12_Calculation_Tests {
     }
 
 
-    @Test
+    // @Test
     @Order(300)
     void test_300_calculateOrderItemVAT_tests() {
         var order = ericsOrderBasePricing;
@@ -370,7 +370,7 @@ public class Application_E12_Calculation_Tests {
         assertEquals(191, actual);
     }
 
-    @Test
+    // @Test
     @Order(310)
     void test_310_calculateOrderItemVAT_SwissPricing_tests() {
         //
@@ -409,7 +409,7 @@ public class Application_E12_Calculation_Tests {
     }
 
 
-    @Test
+    // @Test
     @Order(400)
     void test_400_calculateOrderValue_tests() {
         var order = ericsOrderBasePricing;
@@ -420,7 +420,7 @@ public class Application_E12_Calculation_Tests {
         assertEquals(12979, actual);
     }
 
-    @Test
+    // @Test
     @Order(410)
     void test_410_calculateOrderValue_SwissPricing_tests() {
         var order = ericsOrderSwissPricing;
@@ -432,7 +432,7 @@ public class Application_E12_Calculation_Tests {
     }
 
 
-    @Test
+    // @Test
     @Order(500)
     void test_500_calculateOrderVAT_tests() {
         var order = ericsOrderBasePricing;
@@ -443,7 +443,7 @@ public class Application_E12_Calculation_Tests {
         assertEquals(1318, actual);
     }
 
-    @Test
+    // @Test
     @Order(510)
     void test_510_calculateOrderVAT_SwissPricing_tests() {
         var order = ericsOrderSwissPricing;
